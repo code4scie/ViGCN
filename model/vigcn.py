@@ -42,7 +42,7 @@ class globalGCNBert(nn.Module):
     self.bert = bert
     self.opt = opt
     self.layers = num_layers
-    self.mem_dim = opt.bert_dim // 2
+    self.mem_dim = opt.bert_dim  #// 2
     self.bert_dim = opt.bert_dim
     self.bert_drop = nn.Dropout(opt.bert_dropout) #0.3
     self.pooled_drop = nn.Dropout(opt.bert_dropout) #0.3
